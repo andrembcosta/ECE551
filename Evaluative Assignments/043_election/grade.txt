@@ -1,0 +1,86 @@
+Grading at 10/07/2019:18:58:23.419911
+For commit ID 1e1ed1bbc03098ac51960885d106f793a6b04dcf
+Grading at Mon Oct  7 14:58:03 EDT 2019
+election.c exists (good)
+Attempting to compile election.c
+rm -f *~ printStates printEVotes printRecounts printLargeWin
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printStates.o -o printStates
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printEVotes.o -o printEVotes
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printRecounts.o -o printRecounts
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printLargeWin.o -o printLargeWin
+#################################################
+testcase1 of step1:
+testcase1 passed [1/1]
+#################################################
+testcase2 of step1:
+valgrind reported memory errors [0/1]
+#################################################
+testcase3 of step1:
+testcase3 passed [1/1]
+#################################################
+testcase4 of step1:
+testcase4 passed [1/1]
+#################################################
+testcase5 of step1:
+Your file matched the expected output
+testcase5 passed [10/10]
+#################################################
+testcase6 of step1:
+Difficult corner cases
+Your file matched the expected output
+testcase6 passed [6/6]
+#################################################
+testcase1 of step2:
+Your output is correct [8/8]
+#################################################
+testcase2 of step2:
+Your output is correct [8/8]
+#################################################
+testcase3 of step2:
+Your output is correct [8/8]
+#################################################
+testcase4 of step2:
+Difficult corner cases
+Your output is correct [6/6]
+#################################################
+testcase1 of step3:
+Your output is correct [6/6]
+#################################################
+testcase2 of step3:
+Your output is correct [6/6]
+#################################################
+testcase3 of step3:
+Your output is correct [6/6]
+#################################################
+testcase4 of step3:
+Difficult corner cases
+Your output is correct [2/2]
+#################################################
+testcase1 of step4:
+Your output is correct [8/8]
+#################################################
+testcase2 of step4:
+Your output is correct [8/8]
+#################################################
+testcase3 of step4:
+Your output is correct [8/8]
+#################################################
+testcase4 of step4:
+Difficult corner cases
+Your output is correct [6/6]
+-----------------------------------
+Functionality:  99 points / 100
+------------------------------------
+Code quality:
+ - Format:      3 / 3
+ - Comments:    2 / 3
+ - Abstraction: 0 / 2
+ - Other:       1 / 2
+ Notes from your TA (Anqi):
+Add comments before each function and no need to comment on every single line(-1); No abstraction(-2); You shouldn't use numeric values like 48 or 57 to represent a character(-1);
+------------------------------
+Total quality:   6 / 10
+------------------------------
+Overall grade = functionality *0.9 + quality
+
+Overall Grade: 95.1

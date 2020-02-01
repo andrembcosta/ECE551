@@ -1,0 +1,10 @@
+#!/bin/bash
+stat $@ > right.txt
+./mystat $@ > yours.txt
+echo this is right
+cat right.txt
+echo this is your
+cat yours.txt
+echo this is diff
+diff right.txt yours.txt
+rm right.txt yours.txt

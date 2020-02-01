@@ -1,0 +1,72 @@
+#include "election.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+//include any other headers you need here...
+#define MAX_DIGITS_IN_POPULATION 9
+#define MAX_DIGITS_IN_VOTES 2
+
+state_t parseLine(const char * line) {
+  //STEP 1: write me
+  state_t thisState;
+  int i = 0;  //this is a loop variable
+  while (line[i] != ':' && i < (MAX_STATE_NAME_LENGTH - 1)) {
+    //loop over string and append each char to the name of the state
+    thisState.name[i] = line[i];
+    i++;
+  }
+  thisState.name[i] = '\0';  //add a \0 at the end of the state's name
+  if (line[i] != ':') {  //make sure you stopped at a ":". Otherwise, state's name is long
+    printf("This state's name is too long");
+    exit(EXIT_FAILURE);
+  }
+  i++;  //now, line[i] should be the first digit of the population
+  char stringPopulation[MAX_DIGITS_IN_POPULATION + 1] = "";  //start
+  //a string to store the population
+  int j = 0;  //another loop variable to check size of population
+  while (line[i] != ':' && j < MAX_DIGITS_IN_POPULATION) {
+    stringPopulation[j] = line[i];
+    i++;
+    j++;
+  }
+  stringPopulation[j] = '\0';
+  if (line[i] != ':') {  //make sure you stopped the while loop at a ":".
+    //Otherwise your state's population is too long
+    printf("This state's population is too long");
+    exit(EXIT_FAILURE);
+  }
+  thisState.population = atoi(stringPopulation);
+  i++;  //now, line[i] should be the first digit of the number of electoral votes
+  char stringVotes[MAX_DIGITS_IN_VOTES + 1] =
+      "";  //start a string to store the number of electoral votes
+  j = 0;   //reset j
+  while (line[i] != '\0' && j < MAX_DIGITS_IN_VOTES) {
+    stringVotes[j] = line[i];
+    i++;
+    j++;
+  }
+  stringVotes[j] = '\0';
+  if (line[i] != '\0') {  //make sure you stopped the while loop at a "\0".
+    //Otherwise your state's votes is too long
+    printf("This state's number of electoral votes is too long");
+    exit(EXIT_FAILURE);
+  }
+  thisState.electoralVotes = atoi(stringVotes);
+
+  return thisState;
+}
+
+unsigned int countElectoralVotes(state_t * stateData,
+                                 uint64_t * voteCounts,
+                                 size_t nStates) {
+  //STEP 2: write me
+  return 0;
+}
+
+void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
+  //STEP 3: write me
+}
+
+void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
+  //STEP 4: write me
+}
