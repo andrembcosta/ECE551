@@ -1,0 +1,25 @@
+aaaa bbbb
+aaaaa
+aaaaa bbbba
+AAAAA aaaaa
+ababa babab
+ababa aaabb
+1 4
+aaaaaa bbbbb
+aaaaa bbbb
+AaAaA aaaaa
+      *****
+aaaaa aaaab
+aaaaa aaabb
+aaaaa aabbc
+aaaaa abcde
+aaaab aaabb
+aaaab aabbc
+aaaab abcde
+aaabb aabbc
+aaabb abcde
+aabbc abcde
+abcdr abcde
+a a a a 
+\==]\ [];';,
+12345 12325
